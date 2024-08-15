@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe - Fog of War</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Tic-Tac-Toe - Fog of War</h1>
+
+        <div class="scoreboard">
+            <div class="player player1">
+                <h2>Player 1 (<span id="player1-symbol">X</span>)</h2>
+                <p>Score: <span id="player1-score">0</span></p>
+            </div>
+            <div class="player player2">
+                <h2>Player 2 (<span id="player2-symbol">O</span>)</h2>
+                <p>Score: <span id="player2-score">0</span></p>
+            </div>
+        </div>
+
+        <div class="symbol-selection">
+            <p>Choose Player 1 Symbol:</p>
+            <button class="symbol-btn" data-symbol="X">X</button>
+            <button class="symbol-btn" data-symbol="O">O</button>
+        </div>
+
+        <div class="board">
+            <div class="cell hidden" data-index="0"></div>
+            <div class="cell hidden" data-index="1"></div>
+            <div class="cell hidden" data-index="2"></div>
+            <div class="cell hidden" data-index="3"></div>
+            <div class="cell hidden" data-index="4"></div>
+            <div class="cell hidden" data-index="5"></div>
+            <div class="cell hidden" data-index="6"></div>
+            <div class="cell hidden" data-index="7"></div>
+            <div class="cell hidden" data-index="8"></div>
+        </div>
+
+        <button id="restart">Restart Game</button>
+        <p id="message"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

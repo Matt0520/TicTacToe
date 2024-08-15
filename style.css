@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.game-container {
+    text-align: center;
+    width: 300px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.player {
+    border: 3px solid #333;
+    padding: 10px;
+    transition: box-shadow 0.3s;
+}
+
+.player.active {
+    box-shadow: 0 0 10px 5px #ff5722;
+}
+
+.player.winner {
+    box-shadow: 0 0 15px 10px #00e676;
+}
+
+.symbol-selection {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.symbol-btn {
+    padding: 10px 15px;
+    font-size: 1rem;
+    margin: 0 5px;
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.symbol-btn:hover {
+    background-color: #555;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin: 0 auto 20px auto;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 2px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.cell.hidden {
+    background-color: #ccc;
+    color: transparent;
+}
+
+.cell.revealed {
+    background-color: #fff;
+    color: #333;
+}
+
+.cell:hover {
+    background-color: #e0e0e0;
+}
+
+.current-turn {
+    box-shadow: 0 0 10px #ff5722;
+}
+
+#restart {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+#restart:hover {
+    background-color: #555;
+}
+
+#message {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
